@@ -1,20 +1,14 @@
-//Math object
+//adding styles without overwritting the existing styles
 
-console.log(Math)
-console.log(Math.PI)
-console.log(Math.E)
+const title = document.querySelector('h1');
 
-const area = 7.7
+// title.setAttribute('style', 'margin: 50px;');
 
-console.log(Math.round(area))
-console.log(Math.floor(area))
-console.log(Math.ceil(area))
-console.log(Math.trunc(area))
+console.log(title.style)
+console.log(title.style.color)
 
-//random numbers
+title.style.margin = '50px'
+title.style.color = 'crimson'
+title.style.fontSize = '60px'
 
-const random = Math.random()
-
-console.log(random)
-
-console.log(Math.round(random * 100))
+title.style.margin = ''

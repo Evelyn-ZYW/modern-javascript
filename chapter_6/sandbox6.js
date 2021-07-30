@@ -1,20 +1,25 @@
-//primitive values
-
-let scoreOne = 50;
-let scoreTwo = scoreOne;
-
-console.log(`scoreOne: ${scoreOne}`, `scoreTwo:${scoreTwo}`);
-
-scoreOne = 100;
-console.log(`scoreOne: ${scoreOne}`, `scoreTwo:${scoreTwo}`);
+//add, remove, toggle classes
 
 
-//reference values
+// const content = document.querySelector('p')
 
-const userOne = {name: 'ryu', age: 30};
-const userTwo = userOne;
+// console.log(content.classList)
+// content.classList.add('error')
+// content.classList.remove('error')
+// content.classList.add('success')
 
-console.log(userOne, userTwo);
+const content = document.querySelectorAll('p')
 
-userOne.name = 'chun-li'
-console.log(userOne, userTwo);
+content.forEach((p) => {
+  if (p.textContent.includes('error')) {
+    p.classList.add('error')
+  }
+  if (p.textContent.includes('success')) {
+    p.classList.add('success')
+  }
+})
+
+const title = document.querySelector('.title');
+
+title.classList.toggle('test');
+title.classList.toggle('test');
